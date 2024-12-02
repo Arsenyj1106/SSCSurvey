@@ -40,7 +40,8 @@ def save_survey_data():
             event = Event(
                 name=event_data['event_name'],
                 participants=event_data['participants'],
-                date=event_data['date']
+                date_start=event_data['date_start'],
+                date_end=event_data['date_end'],
             )
             db.session.add(event)
         db.session.commit()
